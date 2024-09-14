@@ -1,4 +1,4 @@
-// src/components/ToDoItem.jsx
+
 import React, { useState } from 'react';
 
 const ToDoItem = ({ task, deleteTask, toggleComplete, editTask }) => {

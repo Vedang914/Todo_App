@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import ToDoList from './components/ToDoList';
-import './App.css'; // Import the CSS for styling
+import './App.css'; 
 
 function App() {
   // State for managing the list of tasks
@@ -13,13 +13,13 @@ function App() {
 
   // Function to add a new task
   const addTask = (taskText) => {
-    if (taskText.trim() === '') return;  // Prevent empty task
+    if (taskText.trim() === '') return;  
     const newTask = {
       id: tasks.length + 1,
       text: taskText,
       completed: false,
     };
-    setTasks([...tasks, newTask]);  // Update the state with the new task
+    setTasks([...tasks, newTask]);  
   };
 
   // Function to delete a task by its id
@@ -33,7 +33,7 @@ function App() {
     const updatedTasks = tasks.map((task) =>
       task.id === taskId ? { ...task, completed: !task.completed } : task
     );
-    setTasks(updatedTasks);  // Update the state with the modified task
+    setTasks(updatedTasks); 
   };
 
   // Function to edit the text of a task
